@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 Tyler. All rights reserved.
 //
 
-#ifndef p2_Header_h
-#define p2_Header_h
+#ifndef __p2_Header_h
+#define __p2_Header_h
+#include "station.h"
 
 // ACSF
 void acsf(Station* stations, int* stationsCoor, const int numberOfStations, int source);
@@ -17,12 +18,15 @@ inline unsigned long long int dist(Station &a, Station &b){
 	return dx*dx + dy*dy;
 }
 // ACSet
-void acset(Station* stations, int* stationsCoor, const int numberOfStations, int source);
+void acset(Station* stations, const int numberOfStations, int source);
 int closestToSet(Station *stations, int* marked, int i, int numberOfStations, int* unMarked);
 
-//ACF
-void acf(Station* stations, int* stationsCoor, const int numberOfStations, int source);
-//int* closestTwo(Station *stations, int* marked, int markedNumber,  int numberOfStations, int* unMarked);
+// ACF
+void acf(Station* stations, const int numberOfStations, int source);
+void acfForDC(Station* stations, const int numberOfStations, int startIndex, int *marked, int *unMarked, unsigned long long int *r);
+
+// DC
+void dc(Station* stations, int* stationsCoor, const int numberOfStations, int source);
 
 // Tree
 unsigned long long int* tree(unsigned long long int *r, int *addressBook, Station *stations, int size, int n);

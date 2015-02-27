@@ -12,7 +12,7 @@
 #include "heapA.h"
 using namespace std;
 
-void acf(Station* stations, int* stationsCoor, const int numberOfStations, int source){
+void acf(Station* stations, const int numberOfStations, int source){
 	
 	// r & q: transmission rate squared
 	unsigned long long int *r = new unsigned long long int[numberOfStations + 1];
@@ -35,6 +35,7 @@ void acf(Station* stations, int* stationsCoor, const int numberOfStations, int s
 	}
 	marked[1] = source;
 	unMarked[source] = 0;
+	
 	for (int i=2; i <= numberOfStations; i++) {
 		unsigned int* indexOfMinL = new unsigned int[numberOfStations+1];
 		for (int kk = 1; kk <= numberOfStations; kk++) indexOfMinL[kk]=0-1;
@@ -77,14 +78,14 @@ void acf(Station* stations, int* stationsCoor, const int numberOfStations, int s
 		unMarked[j] = 0;
 		unsigned long long int tmp = dist(stations[l], stations[j]);
 		r[l] = (r[l]>tmp ? r[l]:tmp);
-
+		
 		//tree
 		t = tree(r, marked, stations, i, numberOfStations);
 		for (int k=1; k<=i; k++) {
 			int ll = marked[k];
 			r[ll] = t[ll];
 		}
-
+		
 		delete [] indexOfMinL;
 	}
 	// calculate the power

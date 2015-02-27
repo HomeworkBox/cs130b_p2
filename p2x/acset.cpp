@@ -9,10 +9,10 @@
 #include <iostream>
 #include "station.h"
 #include "Header.h"
-#include "heapA.h"
+
 using namespace std;
 
-void acset(Station* stations, int* stationsCoor, const int numberOfStations, int source){
+void acset(Station* stations, const int numberOfStations, int source){
 	
 	// r & q: transmission rate squared
 	unsigned long long int *r = new unsigned long long int[numberOfStations + 1];
@@ -50,7 +50,7 @@ void acset(Station* stations, int* stationsCoor, const int numberOfStations, int
 				p[l] = tree2(q, marked, stations, i, numberOfStations);
 			}
 		}
-
+		
 		//Let l be the smallest integer such that l!= j, Ol is a marked station, and p[l] ≤ p[k] for every Ok that is marked;
 		int l = marked[1];
 		for (int k=2; k<=i; k++) {
@@ -79,7 +79,7 @@ void acset(Station* stations, int* stationsCoor, const int numberOfStations, int
 		if (r[k] != 0)
 			cout << k << " " << r[k] << " " << stations[k]._parentIndex << endl;
 	}
-
+	
 	delete [] r;
 	delete [] q;
 	delete [] p;
@@ -91,7 +91,7 @@ void acset(Station* stations, int* stationsCoor, const int numberOfStations, int
 int closestToSet(Station *stations, int* marked, int markedNumber,  int numberOfStations, int* unMarked){
 	unsigned long long int distance = 0-1;
 	int returnIndex = 1;
-
+	
 	for (int i=1; i <= markedNumber; i++) {
 		for (int k = 1; k<=numberOfStations; k++) {
 			if ( unMarked[k] == 0) {

@@ -13,6 +13,10 @@
 		2F45EA4B1A9EF711003B292E /* heapA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA411A9EF711003B292E /* heapA.cpp */; };
 		2F45EA4C1A9EF711003B292E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA431A9EF711003B292E /* main.cpp */; };
 		2F45EA4E1A9EF711003B292E /* tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA461A9EF711003B292E /* tree.cpp */; };
+		2F45EA511A9EFB72003B292E /* dc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA4F1A9EFB72003B292E /* dc.cpp */; };
+		2F45EA531A9F07AA003B292E /* acfForDC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA521A9F07AA003B292E /* acfForDC.cpp */; };
+		2F45EA581AA05C3F003B292E /* mo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA571AA05C3F003B292E /* mo.cpp */; };
+		2F45EA5A1AA05E59003B292E /* acsetForMO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA591AA05E59003B292E /* acsetForMO.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +43,10 @@
 		2F45EA441A9EF711003B292E /* station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = station.h; sourceTree = "<group>"; };
 		2F45EA451A9EF711003B292E /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 		2F45EA461A9EF711003B292E /* tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tree.cpp; sourceTree = "<group>"; };
+		2F45EA4F1A9EFB72003B292E /* dc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dc.cpp; sourceTree = "<group>"; };
+		2F45EA521A9F07AA003B292E /* acfForDC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = acfForDC.cpp; sourceTree = "<group>"; };
+		2F45EA571AA05C3F003B292E /* mo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mo.cpp; sourceTree = "<group>"; };
+		2F45EA591AA05E59003B292E /* acsetForMO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = acsetForMO.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,15 +80,19 @@
 			isa = PBXGroup;
 			children = (
 				2F45EA431A9EF711003B292E /* main.cpp */,
+				2F45EA441A9EF711003B292E /* station.h */,
+				2F45EA401A9EF711003B292E /* Header.h */,
+				2F45EA421A9EF711003B292E /* heapA.h */,
+				2F45EA411A9EF711003B292E /* heapA.cpp */,
+				2F45EA3E1A9EF711003B292E /* acsf.cpp */,
 				2F45EA3C1A9EF711003B292E /* acf.cpp */,
 				2F45EA3D1A9EF711003B292E /* acset.cpp */,
-				2F45EA3E1A9EF711003B292E /* acsf.cpp */,
-				2F45EA401A9EF711003B292E /* Header.h */,
-				2F45EA411A9EF711003B292E /* heapA.cpp */,
-				2F45EA421A9EF711003B292E /* heapA.h */,
-				2F45EA441A9EF711003B292E /* station.h */,
-				2F45EA451A9EF711003B292E /* test.cpp */,
+				2F45EA521A9F07AA003B292E /* acfForDC.cpp */,
+				2F45EA4F1A9EFB72003B292E /* dc.cpp */,
+				2F45EA591AA05E59003B292E /* acsetForMO.cpp */,
+				2F45EA571AA05C3F003B292E /* mo.cpp */,
 				2F45EA461A9EF711003B292E /* tree.cpp */,
+				2F45EA451A9EF711003B292E /* test.cpp */,
 			);
 			path = p2x;
 			sourceTree = "<group>";
@@ -143,8 +155,12 @@
 			files = (
 				2F45EA481A9EF711003B292E /* acset.cpp in Sources */,
 				2F45EA4E1A9EF711003B292E /* tree.cpp in Sources */,
+				2F45EA581AA05C3F003B292E /* mo.cpp in Sources */,
 				2F45EA471A9EF711003B292E /* acf.cpp in Sources */,
+				2F45EA5A1AA05E59003B292E /* acsetForMO.cpp in Sources */,
 				2F45EA4C1A9EF711003B292E /* main.cpp in Sources */,
+				2F45EA511A9EFB72003B292E /* dc.cpp in Sources */,
+				2F45EA531A9F07AA003B292E /* acfForDC.cpp in Sources */,
 				2F45EA4B1A9EF711003B292E /* heapA.cpp in Sources */,
 				2F45EA491A9EF711003B292E /* acsf.cpp in Sources */,
 			);

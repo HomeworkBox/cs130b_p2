@@ -34,13 +34,13 @@ int main(int argc, const char * argv[]) {
 			acsf(stations, stationsCoor, n, s);
 			break;
 		case 2:
-			acset(stations, stationsCoor, n, s);
+			acset(stations, n, s);
 			break;
 		case 3:
-			acf(stations, stationsCoor, n, s);
+			acf(stations, n, s);
 			break;
 		case 4:
-			//			dc(stations, n, s);
+			dc(stations, stationsCoor, n, s);
 			break;
 		default:
 			cout << "Invalid method!\n";
