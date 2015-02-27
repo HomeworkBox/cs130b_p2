@@ -42,6 +42,9 @@ int main(int argc, const char * argv[]) {
 		case 4:
 			dc(stations, stationsCoor, n, s);
 			break;
+		case 5:
+			mo(stations, stationsCoor, n, s);
+			break;
 		default:
 			cout << "Invalid method!\n";
 			return 0;

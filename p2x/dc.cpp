@@ -63,7 +63,7 @@ void dc(Station* stations, int* stationsCoor, const int numberOfStations, int so
 	cout << totalPower << endl;
 	for (int kk = 1; kk<=numberOfStations; kk++) {
 		for (int k=1; k<=numberOfStations; k++) {
-			if (pi[k] == kk) {
+			if (r[k] !=0 && pi[k] == kk) {
 				if (stationsCopy[k]._parentIndex == -1)
 					cout << pi[k] << " " << r[k] << " " << -1 << endl;
 				else

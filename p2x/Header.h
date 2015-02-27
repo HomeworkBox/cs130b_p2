@@ -10,16 +10,19 @@
 #define __p2_Header_h
 #include "station.h"
 
-// ACSF
-void acsf(Station* stations, int* stationsCoor, const int numberOfStations, int source);
 inline unsigned long long int dist(Station &a, Station &b){
 	int dx = a._x - b._x;
 	int dy = a._y - b._y;
 	return dx*dx + dy*dy;
 }
+
+// ACSF
+void acsf(Station* stations, int* stationsCoor, const int numberOfStations, int source);
+
 // ACSet
 void acset(Station* stations, const int numberOfStations, int source);
 int closestToSet(Station *stations, int* marked, int i, int numberOfStations, int* unMarked);
+void acsetForMO(Station* stations, const int numberOfStations, int startIndex, int *marked, int *unMarked, unsigned long long int *r);
 
 // ACF
 void acf(Station* stations, const int numberOfStations, int source);
@@ -27,6 +30,9 @@ void acfForDC(Station* stations, const int numberOfStations, int startIndex, int
 
 // DC
 void dc(Station* stations, int* stationsCoor, const int numberOfStations, int source);
+
+// My own
+void mo(Station* stations, int* stationsCoor, const int numberOfStations, int source);
 
 // Tree
 unsigned long long int* tree(unsigned long long int *r, int *addressBook, Station *stations, int size, int n);

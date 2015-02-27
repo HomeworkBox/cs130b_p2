@@ -23,7 +23,6 @@ void mo(Station* stations, int* stationsCoor, const int numberOfStations, int so
 		stationsCopy[i] = stations[pi[i]];
 	}
 	
-	
 	// r: transmission rate squared
 	unsigned long long int *r = new unsigned long long int[numberOfStations + 1];
 	
@@ -41,16 +40,16 @@ void mo(Station* stations, int* stationsCoor, const int numberOfStations, int so
 	marked[1] = 1;
 	unMarked[1] = 0;
 	
-	acfForDC(stationsCopy, numberOfStations/4, 2, marked, unMarked, r);
+	acsetForMO(stationsCopy, numberOfStations/4, 2, marked, unMarked, r);
 	
 	// 2nd
-	acfForDC(stationsCopy, (numberOfStations/4) * 2, numberOfStations/4 + 1, marked, unMarked, r);
+	acsetForMO(stationsCopy, (numberOfStations/4) * 2, numberOfStations/4 + 1, marked, unMarked, r);
 	
 	// 3rd
-	acfForDC(stationsCopy, (numberOfStations/4) * 3, (numberOfStations/4) * 2 + 1, marked, unMarked, r);
+	acsetForMO(stationsCopy, (numberOfStations/4) * 3, (numberOfStations/4) * 2 + 1, marked, unMarked, r);
 	
 	// 4th
-	acfForDC(stationsCopy, numberOfStations, (numberOfStations/4) * 3 + 1, marked, unMarked, r);
+	acsetForMO(stationsCopy, numberOfStations, (numberOfStations/4) * 3 + 1, marked, unMarked, r);
 	
 	
 	// calculate the power

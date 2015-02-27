@@ -14,15 +14,14 @@ using namespace std;
 
 void acsetForMO(Station* stations, const int numberOfStations, int startIndex, int *marked, int *unMarked, unsigned long long int *r){
 	
-	// r & q: transmission rate squared
-	unsigned long long int *r = new unsigned long long int[numberOfStations + 1];
+	// q: transmission rate squared
 	unsigned long long int *q = new unsigned long long int[numberOfStations + 1];
 	// p: sum of transmission rates squared
 	unsigned long long int *p = new unsigned long long int[numberOfStations + 1];
 	// t: array of transmission rate squared from tree
 	unsigned long long int *t = new unsigned long long int;
 
-	for (int i=2; i <= numberOfStations; i++) {
+	for (int i=startIndex; i <= numberOfStations; i++) {
 		int j = closestToSet(stations, marked, i, numberOfStations, unMarked);
 		marked[i] = j;
 		unMarked[j] = 0;
@@ -57,44 +56,10 @@ void acsetForMO(Station* stations, const int numberOfStations, int startIndex, i
 			r[l] = t[l];
 		}
 	}
-	// calculate the power
-	unsigned long long int totalPower=0;
-	for (int k=1; k<=numberOfStations; k++) {
-		totalPower += r[k];
-	}
-	cout << totalPower << endl;
-	for (int k=1; k<=numberOfStations; k++) {
-		if (r[k] != 0)
-			cout << k << " " << r[k] << " " << stations[k]._parentIndex << endl;
-	}
+
 	
-	delete [] r;
 	delete [] q;
 	delete [] p;
 	delete [] t;
-	delete [] marked;
-	delete [] unMarked;
-}
 
-int closestToSet(Station *stations, int* marked, int markedNumber,  int numberOfStations, int* unMarked){
-	unsigned long long int distance = 0-1;
-	int returnIndex = 1;
-	
-	for (int i=1; i <= markedNumber; i++) {
-		for (int k = 1; k<=numberOfStations; k++) {
-			if ( unMarked[k] == 0) {
-				continue;
-			}
-			unsigned long long int  tmp = dist(stations[marked[i]], stations[k]) ;
-			if ( tmp < distance ) {
-				distance = tmp;
-				returnIndex = k;
-			}
-			else if ( tmp == distance && returnIndex > k) {
-				distance = tmp;
-				returnIndex = k;
-			}
-		}
-	}
-	return returnIndex;
 }
