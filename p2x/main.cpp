@@ -7,7 +7,6 @@
 //
 
 #include <iostream>
-#include "station.h"
 #include "Header.h"
 
 using namespace std;
@@ -44,6 +43,15 @@ int main(int argc, const char * argv[]) {
 			break;
 		case 5:
 			mo(stations, stationsCoor, n, s);
+			break;
+		case 6:
+			dpR(stations, n, s);
+			break;
+		case 7:
+			//dpR(stations, n, s);
+			break;
+		case 8:
+			//dpR(stations, n, s);
 			break;
 		default:
 			cout << "Invalid method!\n";

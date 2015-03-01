@@ -7,9 +7,7 @@
 //
 
 #include <iostream>
-#include "station.h"
 #include "Header.h"
-#include "heapA.h"
 using namespace std;
 
 void mo(Station* stations, int* stationsCoor, const int numberOfStations, int source){

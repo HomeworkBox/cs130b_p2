@@ -7,9 +7,7 @@
 //
 
 #include <iostream>
-#include "station.h"
 #include "Header.h"
-#include "heapA.h"
 using namespace std;
 
 void acf(Station* stations, const int numberOfStations, int source){
@@ -26,13 +24,11 @@ void acf(Station* stations, const int numberOfStations, int source){
 	int *unMarked = new int[numberOfStations+1];
 	for (int i = 1; i<=numberOfStations; i++) {
 		unMarked[i] = i;
-	}
-	
-	for (int i=1; i <= numberOfStations; i++) {
 		r[i] = 0;
 		marked[i] = 0;
 		p[i] = 0-1;
 	}
+
 	marked[1] = source;
 	unMarked[source] = 0;
 	

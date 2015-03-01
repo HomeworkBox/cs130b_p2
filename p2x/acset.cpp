@@ -7,7 +7,6 @@
 //
 
 #include <iostream>
-#include "station.h"
 #include "Header.h"
 
 using namespace std;
@@ -26,12 +25,10 @@ void acset(Station* stations, const int numberOfStations, int source){
 	int *unMarked = new int[numberOfStations+1];
 	for (int i = 1; i<=numberOfStations; i++) {
 		unMarked[i] = i;
-	}
-	
-	for (int i=1; i <= numberOfStations; i++) {
 		r[i] = 0;
 		marked[i] = 0;
 	}
+	
 	marked[1] = source;
 	unMarked[source] = 0;
 	for (int i=2; i <= numberOfStations; i++) {

@@ -9,6 +9,8 @@
 #ifndef __p2_Header_h
 #define __p2_Header_h
 #include "station.h"
+#include "heapA.h"
+#include "val.h"
 
 inline unsigned long long int dist(Station &a, Station &b){
 	int dx = a._x - b._x;
@@ -33,6 +35,9 @@ void dc(Station* stations, int* stationsCoor, const int numberOfStations, int so
 
 // My own
 void mo(Station* stations, int* stationsCoor, const int numberOfStations, int source);
+
+// DP with Recomputation
+void dpR(Station* stations, const int numberOfStations, int k);
 
 // Tree
 unsigned long long int* tree(unsigned long long int *r, int *addressBook, Station *stations, int size, int n);

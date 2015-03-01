@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F4499401AA2DBAF0074B2FF /* dpR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F44993F1AA2DBAF0074B2FF /* dpR.cpp */; };
+		2F4499451AA2DE510074B2FF /* val.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F4499431AA2DE510074B2FF /* val.cpp */; };
 		2F45EA471A9EF711003B292E /* acf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA3C1A9EF711003B292E /* acf.cpp */; };
 		2F45EA481A9EF711003B292E /* acset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA3D1A9EF711003B292E /* acset.cpp */; };
 		2F45EA491A9EF711003B292E /* acsf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA3E1A9EF711003B292E /* acsf.cpp */; };
@@ -32,6 +34,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F44993F1AA2DBAF0074B2FF /* dpR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dpR.cpp; sourceTree = "<group>"; };
+		2F4499431AA2DE510074B2FF /* val.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = val.cpp; sourceTree = "<group>"; };
+		2F4499441AA2DE510074B2FF /* val.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = val.h; sourceTree = "<group>"; };
 		2F45EA321A9EF69E003B292E /* p2x */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = p2x; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F45EA3C1A9EF711003B292E /* acf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = acf.cpp; sourceTree = "<group>"; };
 		2F45EA3D1A9EF711003B292E /* acset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = acset.cpp; sourceTree = "<group>"; };
@@ -60,6 +65,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4499411AA2DBBE0074B2FF /* P1 */ = {
+			isa = PBXGroup;
+			children = (
+				2F45EA3E1A9EF711003B292E /* acsf.cpp */,
+				2F45EA3C1A9EF711003B292E /* acf.cpp */,
+				2F45EA3D1A9EF711003B292E /* acset.cpp */,
+				2F45EA521A9F07AA003B292E /* acfForDC.cpp */,
+				2F45EA4F1A9EFB72003B292E /* dc.cpp */,
+			);
+			name = P1;
+			sourceTree = "<group>";
+		};
+		2F4499421AA2DBD70074B2FF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2F45EA461A9EF711003B292E /* tree.cpp */,
+				2F45EA451A9EF711003B292E /* test.cpp */,
+				2F45EA441A9EF711003B292E /* station.h */,
+				2F45EA421A9EF711003B292E /* heapA.h */,
+				2F45EA411A9EF711003B292E /* heapA.cpp */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		2F45EA291A9EF69E003B292E = {
 			isa = PBXGroup;
 			children = (
@@ -79,20 +108,15 @@
 		2F45EA341A9EF69E003B292E /* p2x */ = {
 			isa = PBXGroup;
 			children = (
-				2F45EA431A9EF711003B292E /* main.cpp */,
-				2F45EA441A9EF711003B292E /* station.h */,
+				2F4499411AA2DBBE0074B2FF /* P1 */,
+				2F4499421AA2DBD70074B2FF /* Helpers */,
 				2F45EA401A9EF711003B292E /* Header.h */,
-				2F45EA421A9EF711003B292E /* heapA.h */,
-				2F45EA411A9EF711003B292E /* heapA.cpp */,
-				2F45EA3E1A9EF711003B292E /* acsf.cpp */,
-				2F45EA3C1A9EF711003B292E /* acf.cpp */,
-				2F45EA3D1A9EF711003B292E /* acset.cpp */,
-				2F45EA521A9F07AA003B292E /* acfForDC.cpp */,
-				2F45EA4F1A9EFB72003B292E /* dc.cpp */,
+				2F45EA431A9EF711003B292E /* main.cpp */,
 				2F45EA591AA05E59003B292E /* acsetForMO.cpp */,
 				2F45EA571AA05C3F003B292E /* mo.cpp */,
-				2F45EA461A9EF711003B292E /* tree.cpp */,
-				2F45EA451A9EF711003B292E /* test.cpp */,
+				2F44993F1AA2DBAF0074B2FF /* dpR.cpp */,
+				2F4499431AA2DE510074B2FF /* val.cpp */,
+				2F4499441AA2DE510074B2FF /* val.h */,
 			);
 			path = p2x;
 			sourceTree = "<group>";
@@ -156,12 +180,14 @@
 				2F45EA481A9EF711003B292E /* acset.cpp in Sources */,
 				2F45EA4E1A9EF711003B292E /* tree.cpp in Sources */,
 				2F45EA581AA05C3F003B292E /* mo.cpp in Sources */,
+				2F4499451AA2DE510074B2FF /* val.cpp in Sources */,
 				2F45EA471A9EF711003B292E /* acf.cpp in Sources */,
 				2F45EA5A1AA05E59003B292E /* acsetForMO.cpp in Sources */,
 				2F45EA4C1A9EF711003B292E /* main.cpp in Sources */,
 				2F45EA511A9EFB72003B292E /* dc.cpp in Sources */,
 				2F45EA531A9F07AA003B292E /* acfForDC.cpp in Sources */,
 				2F45EA4B1A9EF711003B292E /* heapA.cpp in Sources */,
+				2F4499401AA2DBAF0074B2FF /* dpR.cpp in Sources */,
 				2F45EA491A9EF711003B292E /* acsf.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +302,7 @@
 				2F45EA3B1A9EF69E003B292E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

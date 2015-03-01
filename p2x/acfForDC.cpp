@@ -7,9 +7,7 @@
 //
 
 #include <iostream>
-#include "station.h"
 #include "Header.h"
-#include "heapA.h"
 using namespace std;
 
 void acfForDC(Station* stations, const int numberOfStations, int startIndex, int endIndex, int *marked, int *unMarked, unsigned long long int *r){
