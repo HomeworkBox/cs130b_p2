@@ -26,7 +26,7 @@ void acsetForMO(Station* stations, const int numberOfStations, int startIndex, i
 
 // ACF
 void acf(Station* stations, const int numberOfStations, int source);
-void acfForDC(Station* stations, const int numberOfStations, int startIndex, int *marked, int *unMarked, unsigned long long int *r);
+void acfForDC(Station* stations, const int numberOfStations, int startIndex, int endIndex, int *marked, int *unMarked, unsigned long long int *r);
 
 // DC
 void dc(Station* stations, int* stationsCoor, const int numberOfStations, int source);
