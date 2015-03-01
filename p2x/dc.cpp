@@ -16,18 +16,8 @@ void dc(Station* stations, int* stationsCoor, const int numberOfStations, int so
 	
 	heapA *stationHeap = new heapA(stationsCoor, numberOfStations, source);
 	
-//	unsigned long long int *pi = new unsigned long long int[numberOfStations + 1];
-//	for (int i = 1; i <= numberOfStations; i++) {
-//		pi[i] = stationHeap->getMin();
-//		stationsCopy[i] = stations[pi[i]];
-//	}
-//	for (int w=1; w<=numberOfStations; w++) {
-//		cout << pi[w]<< " ";
-//	}
-	
 	// r: transmission rate squared
 	unsigned long long int *r = new unsigned long long int[numberOfStations + 1];
-	unsigned long long int *pi = new unsigned long long int[numberOfStations + 1];
 	// marked is an arrary of marked stations' index
 	int *marked = new int[numberOfStations+1];
 	int *unMarked = new int[numberOfStations+1];

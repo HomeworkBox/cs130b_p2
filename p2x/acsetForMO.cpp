@@ -12,7 +12,7 @@
 
 using namespace std;
 
-void acsetForMO(Station* stations, const int numberOfStations, int startIndex, int *marked, int *unMarked, unsigned long long int *r){
+void acsetForMO(Station* stations, const int numberOfStations, int startIndex, int endIndex, int *marked, int *unMarked, unsigned long long int *r){
 	
 	// q: transmission rate squared
 	unsigned long long int *q = new unsigned long long int[numberOfStations + 1];
@@ -21,7 +21,7 @@ void acsetForMO(Station* stations, const int numberOfStations, int startIndex, i
 	// t: array of transmission rate squared from tree
 	unsigned long long int *t = new unsigned long long int;
 
-	for (int i=startIndex; i <= numberOfStations; i++) {
+	for (int i=startIndex; i <= endIndex; i++) {
 		int j = closestToSet(stations, marked, i, numberOfStations, unMarked);
 		marked[i] = j;
 		unMarked[j] = 0;

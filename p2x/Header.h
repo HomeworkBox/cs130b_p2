@@ -22,7 +22,7 @@ void acsf(Station* stations, int* stationsCoor, const int numberOfStations, int 
 // ACSet
 void acset(Station* stations, const int numberOfStations, int source);
 int closestToSet(Station *stations, int* marked, int i, int numberOfStations, int* unMarked);
-void acsetForMO(Station* stations, const int numberOfStations, int startIndex, int *marked, int *unMarked, unsigned long long int *r);
+void acsetForMO(Station* stations, const int numberOfStations, int startIndex, int endIndex, int *marked, int *unMarked, unsigned long long int *r);
 
 // ACF
 void acf(Station* stations, const int numberOfStations, int source);
