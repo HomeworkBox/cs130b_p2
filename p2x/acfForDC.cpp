@@ -40,12 +40,9 @@ void acfForDC(Station* stations, const int numberOfStations, int startIndex, int
 				for (int kk = 1; kk <= numberOfStations; kk++) q[kk] = r[kk];
 				unsigned long long int tmp = dist(stations[l], stations[j]);
 				
-				//cout << l << " to "<< j <<" "<< tmp << endl;
 				q[l] = (q[l]>tmp ? q[l]:tmp);
-				if (l==12 || l==16) cout << "l="<<l<<" -> j="<< j<<"; q[l]="<<q[l]<<" q[12]="<<q[12]<<endl;
 				//tree
 				unsigned long long int tmpP = tree2(q, marked, stations, i, numberOfStations);
-				if (l==16) cout<<"after tree, q[12]=" << q[12]<<endl;
 				if (tmpP < p[j]) {
 					indexOfMinL[j] = l;
 					p[j] = tmpP;
@@ -72,32 +69,18 @@ void acfForDC(Station* stations, const int numberOfStations, int startIndex, int
 		unMarked[j] = 0;
 		unsigned long long int tmp = dist(stations[l], stations[j]);
 		r[l] = (r[l]>tmp ? r[l]:tmp);
-		if (j==5||j==23)
-			cout << "-----l="<<l<<" -> j="<< j<<"; r[l]="<<r[l]<<" r[12]="<<r[12]<<endl;
 		//tree
 		t = tree(r, marked, stations, i, numberOfStations);
 		for (int k=1; k<=i; k++) {
 			int ll = marked[k];
 			r[ll] = t[ll];
 		}
-		if (r[12]!=4056461) cout<<"r[12] is being changed j="<<j<<" l="<<l<<" r[12]=" <<r[12]<<endl;
 		delete [] indexOfMinL;
 	}
 	// calculate the power
 	unsigned long long int totalPower=0;
 	for (int k=1; k<=numberOfStations; k++) {
 		totalPower += r[k];
-		if (unMarked[k]!=0) cout <<"unmared has non 0 !!!!!!!!!!!!!!"<<endl;
-	}
-	
-	cout << endl << totalPower << endl;
-		for (int k=1; k<=numberOfStations; k++) {
-				if (stations[k]._parentIndex == -1)
-					cout << k << " " << r[k] << " " << -1 << endl;
-				else
-					cout << k << " " << r[k] << " " << stations[k]._parentIndex << endl;
-		
-		
 	}
 
 	delete [] q;
