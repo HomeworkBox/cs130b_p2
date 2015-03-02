@@ -115,8 +115,8 @@
 				2F45EA591AA05E59003B292E /* acsetForMO.cpp */,
 				2F45EA571AA05C3F003B292E /* mo.cpp */,
 				2F44993F1AA2DBAF0074B2FF /* dpR.cpp */,
-				2F4499431AA2DE510074B2FF /* val.cpp */,
 				2F4499441AA2DE510074B2FF /* val.h */,
+				2F4499431AA2DE510074B2FF /* val.cpp */,
 			);
 			path = p2x;
 			sourceTree = "<group>";

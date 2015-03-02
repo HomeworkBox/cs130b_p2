@@ -9,6 +9,9 @@
 #ifndef __p2x__val__
 #define __p2x__val__
 
-#include <stdio.h>
+#include <iostream>
+#include "Header.h"
 
+unsigned long long int val(int i, int j, int m, Station *stations, int ***keyP, int ***keyQ);
+void traceBack(int i, int j, int m, int ***keyP, int ***keyQ, Station *stations, unsigned long long int *r);
 #endif /* defined(__p2x__val__) */
