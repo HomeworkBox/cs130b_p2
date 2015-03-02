@@ -19,6 +19,8 @@
 		2F45EA531A9F07AA003B292E /* acfForDC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA521A9F07AA003B292E /* acfForDC.cpp */; };
 		2F45EA581AA05C3F003B292E /* mo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA571AA05C3F003B292E /* mo.cpp */; };
 		2F45EA5A1AA05E59003B292E /* acsetForMO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA591AA05E59003B292E /* acsetForMO.cpp */; };
+		2F55A1511AA42100005726F9 /* val2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F55A1501AA42100005726F9 /* val2.cpp */; };
+		2F55A1531AA42146005726F9 /* dpNonR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F55A1521AA42146005726F9 /* dpNonR.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +54,8 @@
 		2F45EA521A9F07AA003B292E /* acfForDC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = acfForDC.cpp; sourceTree = "<group>"; };
 		2F45EA571AA05C3F003B292E /* mo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mo.cpp; sourceTree = "<group>"; };
 		2F45EA591AA05E59003B292E /* acsetForMO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = acsetForMO.cpp; sourceTree = "<group>"; };
+		2F55A1501AA42100005726F9 /* val2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = val2.cpp; sourceTree = "<group>"; };
+		2F55A1521AA42146005726F9 /* dpNonR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dpNonR.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +119,10 @@
 				2F45EA591AA05E59003B292E /* acsetForMO.cpp */,
 				2F45EA571AA05C3F003B292E /* mo.cpp */,
 				2F44993F1AA2DBAF0074B2FF /* dpR.cpp */,
+				2F55A1521AA42146005726F9 /* dpNonR.cpp */,
 				2F4499441AA2DE510074B2FF /* val.h */,
 				2F4499431AA2DE510074B2FF /* val.cpp */,
+				2F55A1501AA42100005726F9 /* val2.cpp */,
 			);
 			path = p2x;
 			sourceTree = "<group>";
@@ -185,9 +191,11 @@
 				2F45EA5A1AA05E59003B292E /* acsetForMO.cpp in Sources */,
 				2F45EA4C1A9EF711003B292E /* main.cpp in Sources */,
 				2F45EA511A9EFB72003B292E /* dc.cpp in Sources */,
+				2F55A1511AA42100005726F9 /* val2.cpp in Sources */,
 				2F45EA531A9F07AA003B292E /* acfForDC.cpp in Sources */,
 				2F45EA4B1A9EF711003B292E /* heapA.cpp in Sources */,
 				2F4499401AA2DBAF0074B2FF /* dpR.cpp in Sources */,
+				2F55A1531AA42146005726F9 /* dpNonR.cpp in Sources */,
 				2F45EA491A9EF711003B292E /* acsf.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  val.cpp
+//  val2.cpp
 //  p2x
 //
 //  Created by Tyler Weimin Ouyang on 2/28/15.
@@ -9,7 +9,7 @@
 #include "val.h"
 using namespace std;
 
-unsigned long long int val(int i, int j, int m, Station *stations, int ***keyP, int ***keyQ){
+unsigned long long int val2(int i, int j, int m, Station *stations, int ***keyP, int ***keyQ){
 	// Base 1
 	if (i == j) return 0;
 	// Base 2
@@ -34,15 +34,3 @@ unsigned long long int val(int i, int j, int m, Station *stations, int ***keyP, 
 	return result;
 }
 
-void traceBack(int i, int j, int m, int ***keyP, int ***keyQ, Station *stations, unsigned long long int *r){
-	if (i == keyP[i][j][m] || i==j) return;
-	if (j == keyP[i][j][m]) {
-		stations[j]._parentIndex = i;
-		unsigned long long int tmp = dist(stations[i], stations[j]);
-		r[i] = (r[i]>tmp ? r[i]:tmp);
-		return;
-	}
-	traceBack(i, keyP[i][j][m], keyQ[i][j][m], keyP, keyQ, stations, r);
-	traceBack(keyP[i][j][m], j, m-keyQ[i][j][m], keyP, keyQ, stations, r);
-	
-}

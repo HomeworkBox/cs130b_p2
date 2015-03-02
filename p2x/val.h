@@ -14,4 +14,7 @@
 
 unsigned long long int val(int i, int j, int m, Station *stations, int ***keyP, int ***keyQ);
 void traceBack(int i, int j, int m, int ***keyP, int ***keyQ, Station *stations, unsigned long long int *r);
+// without recomputation
+unsigned long long int val2(int i, int j, int m, Station *stations, int ***keyP, int ***keyQ);
+
 #endif /* defined(__p2x__val__) */

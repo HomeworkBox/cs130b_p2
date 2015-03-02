@@ -48,7 +48,7 @@ int main(int argc, const char * argv[]) {
 			dpR(stations, n, s);
 			break;
 		case 7:
-			//dpR(stations, n, s);
+			dpNonR(stations, n, s);
 			break;
 		case 8:
 			//dpR(stations, n, s);

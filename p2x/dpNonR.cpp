@@ -1,5 +1,5 @@
 //
-//  dpR.cpp
+//  dpNonR.cpp
 //  p2x
 //
 //  Created by Tyler Weimin Ouyang on 2/28/15.
@@ -10,7 +10,7 @@
 #include "Header.h"
 using namespace std;
 
-void dpR(Station* stations, const int numberOfStations, int inK){
+void dpNonR(Station* stations, const int numberOfStations, int inK){
 	
 	// New sequence
 	int *p = new int[numberOfStations + 1];
