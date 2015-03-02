@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
 			dpNonR(stations, n, s);
 			break;
 		case 8:
-			//dpR(stations, n, s);
+			dpIter(stations, n, s);
 			break;
 		default:
 			cout << "Invalid method!\n";

@@ -39,8 +39,11 @@ void mo(Station* stations, int* stationsCoor, const int numberOfStations, int so
 // DP with Recomputation
 void dpR(Station* stations, const int numberOfStations, int k);
 
-// DP withouf recomputation
+// DP without recomputation
 void dpNonR(Station* stations, const int numberOfStations, int inK);
+
+// DP Iterative
+void dpIter(Station* stations, const int numberOfStations, int inK);
 
 // Tree
 unsigned long long int* tree(unsigned long long int *r, int *addressBook, Station *stations, int size, int n);
