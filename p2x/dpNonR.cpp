@@ -19,12 +19,18 @@ void dpNonR(Station* stations, const int numberOfStations, int inK){
 	// keys
 	int ***keyP = new int**[numberOfStations + 1];
 	int ***keyQ = new int**[numberOfStations + 1];
+	unsigned long long int ***results = new unsigned long long int**[numberOfStations+1];
 	for (int i=1; i<=numberOfStations; i++) {
 		keyP[i] = new int*[numberOfStations+1];
 		keyQ[i] = new int*[numberOfStations+1];
+		results[i] = new unsigned long long int*[numberOfStations+1];
 		for (int k=1; k<=numberOfStations; k++) {
 			keyP[i][k] = new int[inK];
 			keyQ[i][k] = new int[inK];
+			results[i][k] = new unsigned long long int[inK];
+			for (int j = 1; j<=numberOfStations; j++) {
+				results[i][k][j] = 0-1;
+			}
 		}
 	}
 	
@@ -48,7 +54,7 @@ void dpNonR(Station* stations, const int numberOfStations, int inK){
 		}
 	}
 	//for (int i=1; i<=numberOfStations;i++) cout<< p[i]<<" ";
-	cout << val(1, numberOfStations, inK, stations, keyP, keyQ) << endl;
+	cout << val2(1, numberOfStations, inK, stations, keyP, keyQ, results) << endl;
 	traceBack(1, numberOfStations, inK, keyP, keyQ, stations, r);
 	/*
 	 for (int i=1; i<=numberOfStations; i++){
@@ -74,11 +80,15 @@ void dpNonR(Station* stations, const int numberOfStations, int inK){
 		for (int k=1; k<=numberOfStations; k++) {
 			delete [] keyP[i][k];
 			delete [] keyQ[i][k];
+			delete [] results[i][k];
 		}
 		delete [] keyP[i];
 		delete [] keyQ[i];
+		delete [] results[i];
 	}
 	
 	delete [] keyP;
 	delete [] keyQ;
+	delete [] results;
 }
+
