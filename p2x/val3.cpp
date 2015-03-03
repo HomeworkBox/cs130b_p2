@@ -1,5 +1,5 @@
 //
-//  val2.cpp
+//  val3.cpp
 //  p2x
 //
 //  Created by Tyler Weimin Ouyang on 2/28/15.
@@ -10,6 +10,22 @@
 using namespace std;
 
 unsigned long long int val3(int i, int j, int m, Station *stations, int ***keyP, int ***keyQ, unsigned long long int ***results){
+	
+	unsigned long long int result = 0-1;
+	
+	for (int k = j - 1; k >= 1; k--){
+		// Direct connection
+		results[k][j][1] = dist(stations[k], stations[j]);
+		keyP[k][j][1] = j;
+		keyQ[k][j][1] = 1;
+		// Indirect connection 
+		for (int d = k + 1; d < j; d++){
+			results[k][j][1+keyQ[d][j][m-1]] = dist(stations[k], stations[j]);
+			keyP[k][j][1] = d;
+			keyQ[k][j][1] = 1+;
+		}
+	}
+	/*
 	if (results[i][j][m] < (unsigned long long int)0-1) {
 		return results[i][j][m];
 	}
@@ -40,6 +56,7 @@ unsigned long long int val3(int i, int j, int m, Station *stations, int ***keyP,
 		}
 	}
 	return result;
+	*/
 }
 
 
