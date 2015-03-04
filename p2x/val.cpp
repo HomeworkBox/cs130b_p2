@@ -35,7 +35,7 @@ unsigned long long int val(int i, int j, int m, Station *stations, int ***keyP, 
 }
 
 void traceBack(int i, int j, int m, int ***keyP, int ***keyQ, Station *stations, unsigned long long int *r){
-	if (i == keyP[i][j][m] || i==j) return;
+	if (i >=j || i == keyP[i][j][m] ) return;
 	if (j == keyP[i][j][m]) {
 		stations[j]._parentIndex = i;
 		unsigned long long int tmp = dist(stations[i], stations[j]);

@@ -25,12 +25,9 @@ void dpIter(Station* stations, const int numberOfStations, int inK){
 		keyQ[i] = new int*[numberOfStations+1];
 		results[i] = new unsigned long long int*[numberOfStations+1];
 		for (int k=1; k<=numberOfStations; k++) {
-			keyP[i][k] = new int[inK];
-			keyQ[i][k] = new int[inK];
-			results[i][k] = new unsigned long long int[inK];
-			for (int j = 1; j<=numberOfStations; j++) {
-				results[i][k][j] = 0-1;
-			}
+			keyP[i][k] = new int[inK+1];
+			keyQ[i][k] = new int[inK+1];
+			results[i][k] = new unsigned long long int[inK+1];
 		}
 	}
 	

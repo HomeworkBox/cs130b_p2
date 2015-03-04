@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0AD7471AA5A57C0085A98C /* dpIter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AD7451AA5A57C0085A98C /* dpIter.cpp */; };
+		2F0AD7481AA5A57C0085A98C /* val3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AD7461AA5A57C0085A98C /* val3.cpp */; };
 		2F4499401AA2DBAF0074B2FF /* dpR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F44993F1AA2DBAF0074B2FF /* dpR.cpp */; };
 		2F4499451AA2DE510074B2FF /* val.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F4499431AA2DE510074B2FF /* val.cpp */; };
 		2F45EA471A9EF711003B292E /* acf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F45EA3C1A9EF711003B292E /* acf.cpp */; };
@@ -36,6 +38,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F0AD7451AA5A57C0085A98C /* dpIter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dpIter.cpp; sourceTree = "<group>"; };
+		2F0AD7461AA5A57C0085A98C /* val3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = val3.cpp; sourceTree = "<group>"; };
 		2F44993F1AA2DBAF0074B2FF /* dpR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dpR.cpp; sourceTree = "<group>"; };
 		2F4499431AA2DE510074B2FF /* val.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = val.cpp; sourceTree = "<group>"; };
 		2F4499441AA2DE510074B2FF /* val.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = val.h; sourceTree = "<group>"; };
@@ -120,9 +124,11 @@
 				2F45EA571AA05C3F003B292E /* mo.cpp */,
 				2F44993F1AA2DBAF0074B2FF /* dpR.cpp */,
 				2F55A1521AA42146005726F9 /* dpNonR.cpp */,
+				2F0AD7451AA5A57C0085A98C /* dpIter.cpp */,
 				2F4499441AA2DE510074B2FF /* val.h */,
 				2F4499431AA2DE510074B2FF /* val.cpp */,
 				2F55A1501AA42100005726F9 /* val2.cpp */,
+				2F0AD7461AA5A57C0085A98C /* val3.cpp */,
 			);
 			path = p2x;
 			sourceTree = "<group>";
@@ -193,10 +199,12 @@
 				2F45EA511A9EFB72003B292E /* dc.cpp in Sources */,
 				2F55A1511AA42100005726F9 /* val2.cpp in Sources */,
 				2F45EA531A9F07AA003B292E /* acfForDC.cpp in Sources */,
+				2F0AD7471AA5A57C0085A98C /* dpIter.cpp in Sources */,
 				2F45EA4B1A9EF711003B292E /* heapA.cpp in Sources */,
 				2F4499401AA2DBAF0074B2FF /* dpR.cpp in Sources */,
 				2F55A1531AA42146005726F9 /* dpNonR.cpp in Sources */,
 				2F45EA491A9EF711003B292E /* acsf.cpp in Sources */,
+				2F0AD7481AA5A57C0085A98C /* val3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,52 +11,36 @@ using namespace std;
 
 unsigned long long int val3(int i, int j, int m, Station *stations, int ***keyP, int ***keyQ, unsigned long long int ***results){
 	
-	unsigned long long int result = 0-1;
-	
-	for (int k = j - 1; k >= 1; k--){
-		// Direct connection
-		results[k][j][1] = dist(stations[k], stations[j]);
-		keyP[k][j][1] = j;
-		keyQ[k][j][1] = 1;
-		// Indirect connection 
-		for (int d = k + 1; d < j; d++){
-			results[k][j][1+keyQ[d][j][m-1]] = dist(stations[k], stations[j]);
-			keyP[k][j][1] = d;
-			keyQ[k][j][1] = 1+;
-		}
-	}
-	/*
-	if (results[i][j][m] < (unsigned long long int)0-1) {
-		return results[i][j][m];
-	}
-	// Base 1
-	if (i == j) return 0;
-	// Base 2
-	if (m == 0) return 0-1;
-	// Base 3
-	if (m == 1) {
-		keyP[i][j][m] = j;
-		keyQ[i][j][m] = 1;
-		results[i][j][m] = dist(stations[i], stations[j]);
-		return results[i][j][m];
-	}
-	unsigned long long int result = 0-1;
-	for (int p=i+1; p<=j; p++) {
-		for (int q=1; q<m; q++) {
-			unsigned long long int tmp1 = val2(i, p, q, stations, keyP, keyQ, results);
-			unsigned long long int tmp2 = val2(p, j, m-q, stations, keyP, keyQ, results);
-			results[i][p][q] = tmp1;
-			results[p][j][m-q] = tmp2;
-			if (tmp1+tmp2 < result){
-				result = tmp1+tmp2;
-				keyP[i][j][m] = p;
-				keyQ[i][j][m] = q;
+	// for all distances
+	for (int d = 1; d <= j-1; d++){
+		// for all starting points
+		for (int s = 1; s <= j - d; s++){
+			// Direct connection
+			unsigned long long int distance = dist(stations[s], stations[s+d]);
+			for (int aM = 1; aM <= m; aM++){
+				results[s][s+d][aM] = distance;
+				keyP[s][s+d][aM] = s+d;
+				keyQ[s][s+d][aM] = 1;
 			}
-			
+			// must via transmitter s+w
+			for (int w = 1; w < d; w++) {
+				// for all numbers of segments
+				for (int e = 2; e <= m; e++){
+					keyQ[s][s+d][e] = 1;
+					// for all numbers of segments on left, Q
+					for (int l = 1; l < e; l++) {
+						unsigned long long int tmp = results[s][s+w][l] + results[s+w][s+d][e-l];
+						if (results[s][s+d][e] > tmp){
+							results[s][s+d][e] = tmp;
+							keyP[s][s+d][e] = s+w;
+							keyQ[s][s+d][e] = l;
+						}
+					}
+				}
+			}
 		}
 	}
-	return result;
-	*/
+	return results[i][j][m];
 }
 
 

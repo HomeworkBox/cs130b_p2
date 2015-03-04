@@ -23,8 +23,8 @@ void dpR(Station* stations, const int numberOfStations, int inK){
 		keyP[i] = new int*[numberOfStations+1];
 		keyQ[i] = new int*[numberOfStations+1];
 		for (int k=1; k<=numberOfStations; k++) {
-			keyP[i][k] = new int[inK];
-			keyQ[i][k] = new int[inK];
+			keyP[i][k] = new int[inK+1];
+			keyQ[i][k] = new int[inK+1];
 		}
 	}
 	
